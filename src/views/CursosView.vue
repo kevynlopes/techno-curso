@@ -10,7 +10,7 @@
           <p>{{ api.descricao }}</p>
         </div>
         <ul>
-          <li v-for="curso in api.cursos" :key="curso">
+          <li v-for="curso in api.cursos" :key="curso" class="mb-10">
             <router-link :to="{ name: 'curso', params: { curso: curso.id } }">
               <h2 class="text-2xl font-semibold">
                 {{ curso.nome }} - {{ curso.totalAulas }} aulas |
@@ -18,7 +18,6 @@
               </h2>
             </router-link>
             <p>{{ curso.descricao }}</p>
-            {{ curso.horas }}
           </li>
         </ul>
       </div>
